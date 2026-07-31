@@ -31,7 +31,7 @@ import java.nio.file.Path;
         version = "1.7.0",
         description = "Cross-server proxy chat plugin — broadcast, join/switch/leave messages with server aliases",
         authors = {"YuHongChen(LiquidTeam) QQ:1464670605"},
-        url = "https://github.com/LiquidTeam/VelocityChat",
+        url = "https://github.com/LiquidTeamYHC/Velocity_Plugin/tree/main/VelocityChat",
         dependencies = {
                 @Dependency(id = "luckperms", optional = true)
         }
