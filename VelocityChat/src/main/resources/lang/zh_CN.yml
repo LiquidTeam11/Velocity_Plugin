@@ -1,0 +1,39 @@
+# ── 简体中文语言文件 / Chinese Simplified Language File ──
+
+# 群组名称 / Proxy Name
+qu_an.chat.proxy.name: "§2群组"
+
+# ── 服务器连接/切换/离开消息 ──
+# {0}: 玩家名 / player name
+# {1}: 服务器名称 / server name
+# {2}: 旧服务器名称 / old server name (仅用于切换 / switch only)
+
+# 加入服务器
+qu_an.chat.message.connected: "§8[§2+§8]§r {0} §2加入了 §r{1}"
+
+# 切换服务器
+qu_an.chat.message.server_switch: "§8[§b⇄§8]§r {0} §2从 §r{1} §2切换到了 §r{2}"
+
+# 离开服务器
+qu_an.chat.message.disconnect: "§8[§c-§8]§r {0} §2离开了 §r{1}"
+
+# ── 聊天消息格式 ──
+# {0}: 群组名称 / proxy name
+# {1}: 服务器名称 / server name
+# {2}: 玩家名 / player name
+# {3}: 聊天内容 / chat message
+qu_an.chat.message.chat.default: "§8[§r{0}§8][§r{1}§8]§r<{2}§r> {3}"
+
+# 跨服广播消息格式
+# {0}: 玩家名, {1}: 服务器名, {2}: 聊天内容
+qu_an.chat.message.broadcast: "§d[跨服聊天]§r[{1}§r]§r{0} §7>>§f {2}"
+
+# ── 服务器别名 / Server Aliases ──
+# 格式: qu_an.chat.server.name.<服务器ID>=<显示名称>
+# 未定义别名的服务器将显示原始 ID
+qu_an.chat.server.name.lobby: "§6登录服"
+qu_an.chat.server.name.survival: "§a生存服"
+qu_an.chat.server.name.minigame: "§b小游戏服"
+qu_an.chat.server.name.factions: "§c战争服"
+qu_an.chat.server.name.skyblock: "§d空岛服"
+qu_an.chat.server.name.creative: "§e创造服"

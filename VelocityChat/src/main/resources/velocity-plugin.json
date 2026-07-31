@@ -1,0 +1,8 @@
+{
+    "id": "velocity-chat",
+    "name": "VelocityChat",
+    "version": "1.7.0",
+    "description": "Cross-server proxy chat plugin — broadcast, join/switch/leave messages with server aliases",
+    "authors": ["YuHongChen(LiquidTeam) QQ:1464670605"],
+    "main": "com.velocitychat.VelocityChat"
+}

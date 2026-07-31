@@ -1,0 +1,39 @@
+# ── English Language File ──
+
+# Proxy Name
+qu_an.chat.proxy.name: "§2Proxy"
+
+# ── Server Connection/Switch/Disconnect Messages ──
+# {0}: player name
+# {1}: server name
+# {2}: old server name (switch only)
+
+# Join server
+qu_an.chat.message.connected: "§8[§2+§8]§r {0} §2joined §r{1}"
+
+# Switch server
+qu_an.chat.message.server_switch: "§8[§b⇄§8]§r {0} §2switched from §r{1} §2to §r{2}"
+
+# Leave server
+qu_an.chat.message.disconnect: "§8[§c-§8]§r {0} §2left §r{1}"
+
+# ── Chat Message Format ──
+# {0}: proxy name
+# {1}: server name
+# {2}: player name
+# {3}: chat message
+qu_an.chat.message.chat.default: "§8[§r{0}§8][§r{1}§8]§r<{2}§r> {3}"
+
+# Broadcast message format
+# {0}: player name, {1}: server name, {2}: chat message
+qu_an.chat.message.broadcast: "§d[Broadcast]§r[{1}§r]§r{0} §7>>§f {2}"
+
+# ── Server Aliases / Server Names ──
+# Format: qu_an.chat.server.name.<server_id>=<display_name>
+# Servers without an alias will display the raw server ID
+qu_an.chat.server.name.lobby: "§6Lobby"
+qu_an.chat.server.name.survival: "§aSurvival"
+qu_an.chat.server.name.minigame: "§bMinigames"
+qu_an.chat.server.name.factions: "§cFactions"
+qu_an.chat.server.name.skyblock: "§dSkyBlock"
+qu_an.chat.server.name.creative: "§eCreative"

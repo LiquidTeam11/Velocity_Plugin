@@ -1,0 +1,22 @@
+# ── IDE / 编辑器配置 ─────────────────────────
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ── 构建产物 / Build output ──────────────────
+build/
+target/
+out/
+.gradle/
+
+# ── 编译出的插件 jar（源码仓库不存放二进制）───
+*.jar
+!gradle-wrapper.jar
+
+# ── 本地数据 / 运行时文件 ────────────────────
+*.db
+*.db-shm
+*.db-wal
+groups.yml

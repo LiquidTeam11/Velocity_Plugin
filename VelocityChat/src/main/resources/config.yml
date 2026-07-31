@@ -1,0 +1,88 @@
+# ============================================================
+# VelocityChat — Configuration
+# ============================================================
+# 占位符 / Placeholders:
+#   {0} = 群组名称 / proxy name
+#   {1} = 服务器名称 / server name
+#   {2} = 玩家名 / player name
+#   {3} = 聊天内容 / chat message
+# 颜色字符: § (e.g. §a, §c, §6, §l, §r)
+# ============================================================
+
+# ── 语言设置 / Language ────────────────────────────────────
+# 语言文件在 lang/ 文件夹中 / Language files are in the lang/ folder
+# 支持的语言 / Supported languages:
+#   zh_CN — 简体中文 (Chinese Simplified)
+#   en_US — English (US)
+language: zh_CN
+
+# ── 广播指令别名 / Broadcast Command Aliases ──────────────
+# 玩家可使用 /br <消息> 或 /broadcast <消息> 发送跨服聊天
+# 也可在此添加更多别名 / You can add more aliases here
+broadcast-aliases:
+  - "br"
+  - "broadcast"
+
+# ── 跨服聊天冷却设置 / Broadcast Cooldown ──────────────────
+# 玩家使用 /br 后需要等待的秒数（设为 0 关闭冷却）
+# Cooldown in seconds between /br uses (0 = no cooldown)
+# 启用权限绕过后，拥有 velocitychat.admin 权限的玩家不受限制
+# When enabled, players with velocitychat.admin bypass the cooldown
+broadcast-cooldown: 0
+broadcast-cooldown-bypass: false
+
+# ── 服务器别名 / Server Aliases ───────────────────────────
+# 需要显示别名的服务器列表（显示名称在语言文件中定义：qu_an.chat.server.name.<id>）
+# List servers that should show a localized alias (defined in language files: qu_an.chat.server.name.<id>)
+# 如果某服务器在此列表但未定义名称，则使用服务器原始 ID
+# If a server is in this list but has no alias defined, the raw server ID is used
+server-aliases:
+  - lobby
+  - survival
+  - minigame
+  - factions
+  - skyblock
+  - creative
+
+# ── 进服/切服/离服消息可见性 / Join/Switch/Leave Visibility ──
+# notify-mode: 谁可以看到这些消息 / Who can see these messages
+#   all   — 所有玩家都可见 / Everyone can see (default)
+#   admin — 仅管理员可见（需 velocitychat.admin 权限） / Admins only
+#   none  — 关闭通知 / Disabled
+notify-mode: all
+
+# ── 群组称号配置 / Group Titles ────────────────────────────
+# 群组系统允许给特定玩家设置称号（显示在跨服广播的玩家名前）
+# Groups let you assign titles displayed before a player's name in broadcasts
+# /vchat create group <名称> [称号]  — 创建群组并设置称号（支持&颜色代码）
+# /vchat group <名称> join <玩家ID>  — 将玩家加入群组 / Add a player to a group
+# /vchat group <名称> settitle <称号> — 修改群组称号 / Change group title
+# 称号支持 & 颜色代码，例如 &c[管理员] / Titles support & color codes
+# 组数据存储在 groups.yml 文件中 / Group data is stored in groups.yml
+#
+# 你也可以在此预设群组（首次启动时会生成）：
+# You can preset groups here (generated on first startup):
+# groups:
+#   admin:
+#     title: "&c&l[Admin]"
+#     members:
+#       - "player1"
+#       - "player2"
+#   vip:
+#     title: "&6&l[VIP]"
+#     members: []
+
+# ── 消息配置 / Messages ────────────────────────────────────
+# 此处可覆盖语言文件中的特定消息，优先级高于语言文件
+# Here you can override specific messages from the language file
+# These overrides take priority over the language file
+# 可用的消息键 / Available message keys:
+#   qu_an.chat.proxy.name
+#   qu_an.chat.message.connected
+#   qu_an.chat.message.server_switch
+#   qu_an.chat.message.disconnect
+#   qu_an.chat.message.chat.default
+#   qu_an.chat.server.name.<id>
+# messages:
+#   qu_an.chat.proxy.name: "§d跨服聊天"
+#   qu_an.chat.server.name.lobby: "§6登录服"
