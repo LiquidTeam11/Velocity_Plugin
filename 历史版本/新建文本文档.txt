@@ -1,0 +1,16 @@
+. 许可证: 选择 MIT
+  2. License URL: 如果你的项目在 GitHub，填：
+  https://raw.githubusercontent.com/YuHongChen/Velocity-Report/main/LICENSE
+  2. 如果暂时没上 GitHub，也可以不填 URL，只选 MIT 就行。
+
+
+Summary: 为 Velocity-Report 添加英语语言支持
+
+  新增文件
+
+  1. LanguageManager.java — 语言管理器，负责从 lang_*.yml 加载消息。支持：
+    - 从插件数据目录加载（用户可自定义）或回退到 jar 内置资源
+    - 运行时 reloadConfig() 时重新加载
+    - 从 config.yml > messages 逐键覆盖（向后兼容）
+  2. lang_zh.yml — 中文语言文件（60+ 消息键，涵盖所有用户可见文本）
+  3. lang_en.yml — 英语语言文件（与中文键一一对应）

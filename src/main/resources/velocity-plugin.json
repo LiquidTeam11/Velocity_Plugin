@@ -1,0 +1,8 @@
+{
+    "id": "velocity-report",
+    "name": "VelocityReport",
+    "version": "2.0.1",
+    "description": "Cross-server report plugin for Velocity proxy",
+    "authors": ["YuHongChen(LiquidTeam)"],
+    "main": "com.velocityreport.VelocityReport"
+}
