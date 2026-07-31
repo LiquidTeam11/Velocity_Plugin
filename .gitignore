@@ -20,3 +20,11 @@ out/
 *.db-shm
 *.db-wal
 groups.yml
+
+# ── 本地备份（历史版本 jar）──────────────────
+_jar备份/
+
+# ── 其他插件（暂未上传）──────────────────────
+\[获取子服人数\]ServerInfoBridge/
+\[跨服tp\]VelocityTP/
+\[限制同IP进服的账号\]VelocityMultiAccountLimit/

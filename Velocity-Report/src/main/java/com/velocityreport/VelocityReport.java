@@ -25,7 +25,7 @@ import java.util.Map;
 @Plugin(
     id = "velocity-report",
     name = "VelocityReport",
-    version = "2.1.1",
+    version = "2.2.0",
     description = "Cross-server report plugin for Velocity proxy",
     authors = {"YuHongChen(LiquidTeam)"},
     url = "https://github.com/LiquidTeamYHC/Velocity_Plugin/tree/main/Velocity-Report"

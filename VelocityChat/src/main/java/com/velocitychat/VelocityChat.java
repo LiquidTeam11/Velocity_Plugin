@@ -28,7 +28,7 @@ import java.nio.file.Path;
 @Plugin(
         id = "velocity-chat",
         name = "VelocityChat",
-        version = "1.7.0",
+        version = "1.8.0",
         description = "Cross-server proxy chat plugin — broadcast, join/switch/leave messages with server aliases",
         authors = {"YuHongChen(LiquidTeam) QQ:1464670605"},
         url = "https://github.com/LiquidTeamYHC/Velocity_Plugin/tree/main/VelocityChat",
