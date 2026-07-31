@@ -1,0 +1,101 @@
+# ============================================================
+# VelocityReport — Configuration
+# ============================================================
+# 占位符 / Placeholders: {reporter}, {reported}, {id}, {server},
+#                        {reported_server}, {reason}, {time}, {status},
+#                        {page}, {total}, {count}, {handler_info}, {player}
+# 消息格式: MiniMessage
+# ============================================================
+
+# ── 语言设置 / Language ────────────────────────────────────
+# 语言文件在 lang/ 文件夹中 / Language files are in the lang/ folder
+# 支持的语言 / Supported languages:
+#   zh_CN — 简体中文 (Chinese Simplified)
+#   en_US — English (US)
+language: zh_CN
+
+# ── 数据库配置 / Database ───────────────────────────────────
+# type: sqlite 或 / or mysql
+database:
+  type: sqlite
+
+  # SQLite 配置（type: sqlite 时生效）
+  sqlite:
+    filename: "reports.db"
+
+  # MySQL 配置（type: mysql 时生效）
+  mysql:
+    host: "127.0.0.1"
+    port: 3306
+    database: "velocity_report"
+    user: "root"
+    password: ""
+
+    # HikariCP 连接池配置（不填写则使用默认值）
+    # HikariCP connection pool settings (default values used if not specified)
+    pool:
+      maximum-pool-size: 10
+      minimum-idle: 3
+      connection-timeout: 5000        # 毫秒 / ms
+      idle-timeout: 600000            # 毫秒 / ms (10分钟)
+      max-lifetime: 1800000           # 毫秒 / ms (30分钟)
+      keepalive-time: 300000          # 毫秒 / ms (5分钟)
+      leak-detection-threshold: 30000 # 毫秒 / ms (30秒)
+
+# 举报冷却时间（秒），设为 0 关闭冷却
+# Report cooldown (seconds), set to 0 to disable
+cooldown-seconds: 60
+
+# ── 举报原因模板 / Report Reasons ──────────────────────────
+# 玩家输入 /report <玩家> 时将显示点击选择菜单
+# 显示名称和描述在语言文件中定义 (reason-<id>, reason-<id>-desc)
+# Display name and description are in the language file (reason-<id>, reason-<id>-desc)
+# id: 原因标识符 / reason identifier
+# icon: 图标表情 / icon emoji
+report-reasons:
+  - id: "hacking"
+    icon: "⛏"
+  - id: "chat"
+    icon: "💬"
+  - id: "griefing"
+    icon: "💥"
+  - id: "admin-abuse"
+    icon: "⚡"
+  - id: "other"
+    icon: "📋"
+
+# 每页显示的举报数量
+# Reports per page
+reports-per-page: 10
+
+# 管理员名单（不区分大小写）
+# 未安装 LuckPerms 等权限插件时，在此处列出管理员用户名即可看到举报通知和后台命令
+# Staff usernames (case-insensitive)
+# Used when no permission plugin (like LuckPerms) is installed
+staff-users:
+  - "YuHongChen"
+  - "admin2"
+
+# 服务器别名 / Server Aliases
+# 需要显示别名的服务器列表（显示名称在语言文件中定义：server-alias-<name>）
+# List servers that should show a localized alias (display text in language files: server-alias-<name>)
+server-aliases:
+  - lobby
+  - survival
+  - minigame
+
+# ── 消息配置 / Messages ────────────────────────────────────
+# 此处可覆盖语言文件中的特定消息，优先级高于语言文件
+# Here you can override specific messages from the language file
+# These overrides take priority over the language file (lang/*.yml)
+#
+# 可用的消息键 / Available message keys:
+# prefix, report-sent, report-cooldown, self-report, player-not-found,
+# no-reports, report-list-header, report-entry, report-detail,
+# report-closed, staff-notify, staff-join-notify, invalid-report-id, already-closed
+#
+# 更多键请参见 lang/zh_CN.yml 或 lang/en_US.yml
+# See lang/zh_CN.yml or lang/en_US.yml for all available keys
+# messages:
+#   prefix: "<red>[Report]</red> "
+#   report-sent: "<green>Your report against <yellow>{reported}</yellow> has been submitted.</green>"

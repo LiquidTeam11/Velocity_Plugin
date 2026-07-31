@@ -1,0 +1,139 @@
+# ============================================================
+# VelocityReport — English Language File (en_US)
+# ============================================================
+# Format: key: "MiniMessage formatted message text"
+# Placeholders: {reporter}, {reported}, {id}, {server},
+#               {reported_server}, {reason}, {time}, {status},
+#               {page}, {total}, {count}, {handler_info}, {player},
+#               {target}, {input}, {handler}, {resolution}, {handled_at},
+#               {number}, {description}, {icon}, {name}
+# ============================================================
+
+# ── General ─────────────────────────────────────────────────
+prefix: "<red>[Report]</red> "
+
+# ── Server Aliases ──────────────────────────────────────────
+server-alias-lobby: "&eLobby"
+server-alias-survival: "&aSurvival"
+server-alias-minigame: "&6Minigame"
+
+# ── Report related ──────────────────────────────────────────
+report-sent: "<green>Your report against <yellow>{reported}</yellow> has been submitted. Thank you for your feedback!</green>"
+report-cooldown: "<red>Please wait {time} seconds before submitting another report.</red>"
+self-report: "<red>You cannot report yourself.</red>"
+player-not-found: "<red>Player '{player}' not found.</red>"
+
+# ── Listing & Detail ────────────────────────────────────────
+no-reports: "<yellow>There are no pending reports.</yellow>"
+report-list-header: "<gold>=== Report List (Page {page}/{total}) ===</gold>"
+report-entry: "<yellow>#{id}</yellow> <white>{reported}</white> <gray>reported by</gray> <white>{reporter}</white> <gray>on</gray> <white>{server}</white> <gray>({time})</gray>"
+report-detail: |
+  <gold>=== Report Detail #{id} ===</gold>
+  <newline><gray>Reporter:</gray> <white>{reporter}</white>
+  <newline><gray>Reported:</gray> <white>{reported}</white>
+  <newline><gray>Reporter's Server:</gray> <white>{server}</white>
+  <newline><gray>Reported's Server:</gray> <white>{reported_server}</white>
+  <newline><gray>Reason:</gray> <white>{reason}</white>
+  <newline><gray>Time:</gray> <white>{time}</white>
+  <newline><gray>Status:</gray> <white>{status}</white>{handler_info}
+
+report-closed: "<green>Report #{id} has been {status}.</green>"
+
+# ── Staff Notification ──────────────────────────────────────
+staff-notify: "<red>[Report]</red> <white>{reporter}</white> <gray>reported</gray> <white>{reported}</white> <gray>on</gray> <white>{server}</white><gray>:</gray> <white>{reason}</white>"
+staff-join-notify: "<yellow>There are {count} pending reports. Use <click:suggest_command:'/reports'><hover:show_text:'<green>Click to view</green>'><aqua>/reports</aqua></hover></click> to view.</yellow>"
+
+# ── Errors ──────────────────────────────────────────────────
+invalid-report-id: "<red>Report #{id} not found.</red>"
+already-closed: "<red>Report #{id} has already been {status}.</red>"
+report-internal-error: "<red>An internal error occurred. Please try again later.</red>"
+report-internal-error-short: "<red>An internal error occurred.</red>"
+report-failed-update: "<red>Failed to update report.</red>"
+
+# ── Status Labels ───────────────────────────────────────────
+status-open: "<green>Open</green>"
+status-resolved: "<gold>Resolved</gold>"
+status-dismissed: "<gray>Dismissed</gray>"
+status-open-plain: "Pending"
+status-resolved-plain: "Resolved"
+
+# ── Commands ────────────────────────────────────────────────
+command-player-only: "<red>This command can only be used by players.</red>"
+command-report-usage: "<gold>Usage: /report <player> [reason]</gold>"
+command-report-custom-reason: "<gold>Please use /report {player} <reason> to specify a custom reason.</gold>"
+command-reason-too-long: "<red>Reason is too long. Please keep it under 256 characters.</red>"
+command-invalid-page: "<red>Invalid page number: {input}</red>"
+command-reportview-usage: "<gold>Usage: /reportview <id></gold>"
+command-reportclose-usage: "<gold>Usage: /reportclose <id> [resolution]</gold>"
+command-reportclose-default-resolution: "No resolution specified."
+command-reportcd-view-usage: "<gold>Usage: /reportcd view <id></gold>"
+command-reportcd-resolve-usage: "<gold>Usage: /reportcd resolve <id></gold>"
+command-reportcd-reopen-usage: "<gold>Usage: /reportcd reopen <id></gold>"
+command-invalid-id: "<red>Invalid report ID: {input}</red>"
+command-reload-success: "<green>Configuration reloaded successfully.</green>"
+command-reload-fail: "<red>Configuration reload failed. Check console for details.</red>"
+
+# ── Report History ──────────────────────────────────────────
+report-history-player-not-found: "<yellow>No reports found for <white>{player}</white>.</yellow>"
+report-history-title-all: "<gold>All Report History (Page {page}/{total})</gold>"
+report-history-title-player: "<gold>Report History for {player} (Page {page}/{total})</gold>"
+report-history-status-icon-open: "&c[Pending]"
+report-history-status-icon-closed: "&a[Resolved]"
+report-history-entry-format: "{status_icon} {reporter} &7→ {reported} &7| &f{reason}"
+report-history-nav-prev: "<click:run_command:'{command}'><hover:show_text:'{hover}'><gold>[Previous Page]</gold></hover></click>"
+report-history-nav-next: "<click:run_command:'{command}'><hover:show_text:'{hover}'><gold>[Next Page]</gold></hover></click>"
+report-history-nav-page: "<gray>Page {page}/{total}</gray>"
+report-history-hover-prev: "<gray>Previous page</gray>"
+report-history-hover-next: "<gray>Next page</gray>"
+report-history-hover-template: |
+  <green>Click to view details</green>
+  <newline><gray>{reporter} reported {reported}
+  <newline>Reason: {reason}
+  <newline>Status: {status}</gray>
+report-history-hover-detail: "<green>Click to view details</green>"
+
+# ── Report Detail Menu ──────────────────────────────────────
+report-detail-title: "&6═══ Report #{id} Detail ═══"
+report-detail-reporter: "&7Reporter: &f{reporter}"
+report-detail-reported: "&7Reported: &f{reported}"
+report-detail-reason: "&7Reason: &f{reason}"
+report-detail-reporter-server: "&7Reporter's Server: &f{server}"
+report-detail-reported-server: "&7Reported's Server: &f{server}"
+report-detail-time: "&7Time: &f{time}"
+report-detail-status: "&7Status: {status}"
+report-detail-handler: "&7Handler: &f{handler}"
+report-detail-resolution-label: "&7Resolution: &f{resolution}"
+report-detail-handled-at: "&7Handled At: &f{handled_at}"
+report-detail-btn-resolve: "<click:run_command:'/reportcd resolve {id}'><hover:show_text:'{hover}'><green>[✅ Mark Resolved]</green></hover></click>"
+report-detail-btn-reopen: "<click:run_command:'/reportcd reopen {id}'><hover:show_text:'{hover}'><yellow>[↩ Mark Pending]</yellow></hover></click>"
+report-detail-btn-back: "<click:run_command:'/reportcd list 1'><hover:show_text:'{hover}'><gray>[Back to List]</gray></hover></click>"
+report-detail-hover-resolve: "<green>Mark as resolved</green>"
+report-detail-hover-reopen: "<yellow>Mark as pending</yellow>"
+report-detail-hover-back: "<gray>Back to list</gray>"
+
+# ── Reason Display Texts ────────────────────────────────
+reason-hacking: "&cHacking"
+reason-hacking-desc: "KillAura, ESP, AutoClicker etc."
+reason-chat: "&eChat Violation"
+reason-chat-desc: "Swearing, spamming, advertising etc."
+reason-griefing: "&6Griefing"
+reason-griefing-desc: "Griefing builds, stealing etc."
+reason-admin-abuse: "&5Admin Abuse"
+reason-admin-abuse-desc: "Admin abusing permissions"
+reason-other: "&7Other"
+reason-other-desc: "Use /report <player> <reason> to customize"
+
+# ── Report Reason Menu ──────────────────────────────────────
+report-reason-menu-title: "<gold>═══ Select reason to report <yellow>{target}</yellow> ═══</gold>"
+report-reason-menu-hover: "<green>Click to select: {name}</green><newline><gray>{description}</gray>"
+report-reason-menu-hover-other: "<gray>{description}</gray>"
+report-reason-menu-footer: "<gray>Click an option above to submit, or use <yellow>/report {target} <reason></yellow> for a custom reason.</gray>"
+report-reason-menu-number-format: "<gray>{number}.</gray> <white>{icon} {name}</white>"
+report-reason-menu-option-format: "{icon} {name}"
+
+# ── Toggle / Resolve Notifications ──────────────────────────
+report-toggle-resolved: "<green>Report #{id} has been marked as resolved.</green>"
+report-toggle-reopened: "<yellow>Report #{id} has been reopened.</yellow>"
+report-toggle-already-open: "<yellow>Report #{id} is already pending.</yellow>"
+report-notify-resolved: "<green>Your report #{id} has been resolved.</green>"
+report-resolve-default-reason: "Marked as resolved by staff"
