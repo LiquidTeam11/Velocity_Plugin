@@ -5,7 +5,7 @@
 **Velocity 代理端插件源代码集**
 
 [![English](https://img.shields.io/badge/English-Read_in_English-blue?style=for-the-badge&logo=github)](README.md)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-orange.svg)]()
 [![Velocity](https://img.shields.io/badge/Velocity-3.x-blueviolet.svg)]()
 
@@ -46,4 +46,4 @@ cd ../VelocityChat && mvn package
 
 ## 开源协议
 
-[GPL-3.0 License](LICENSE)
+[MIT License](LICENSE)

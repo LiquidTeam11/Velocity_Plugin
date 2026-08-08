@@ -5,7 +5,7 @@
 **A collection of Velocity proxy plugin source code**
 
 [![简体中文](https://img.shields.io/badge/简体中文-Read_in_Chinese-blue?style=for-the-badge&logo=github)](README_zh_CN.md)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-orange.svg)]()
 [![Velocity](https://img.shields.io/badge/Velocity-3.x-blueviolet.svg)]()
 
@@ -46,4 +46,4 @@ cd ../VelocityChat && mvn package
 
 ## License
 
-[GPL-3.0 License](LICENSE)
+[MIT License](LICENSE)
